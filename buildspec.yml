@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install: 
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+    finally:
+      - echo This always runs even if the pre_build commands failed
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - composer install --no-interaction --no-progress --no-suggest -d=www/
+    finally:
+      - echo This always runs even if the install command fails
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
+
+cache:
+  paths:
+    - www/vendor/**/*
