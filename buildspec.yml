@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - composer install --no-interaction --no-progress --no-suggest -d=www/
+      - composer install --no-interaction --no-progress --no-suggest
     finally:
       - echo This always runs even if the install command fails
   post_build:
@@ -24,4 +24,4 @@ artifacts:
 
 cache:
   paths:
-    - www/vendor/**/*
+    - vendor/**/*

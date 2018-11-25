@@ -1,5 +1,5 @@
 # aws-demo-php-simple-app
-# Trigger deploy : 3
+# Trigger deploy : 4
 Application was created for use with an AWS Partner blog post and will be used for demonstration purposes for other web applications.
 
 This web application utilizes the PHP scripting language to gather information system information and display that information using HTML/CSS/Chart.js.
