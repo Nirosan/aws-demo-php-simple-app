@@ -1,6 +1,11 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - printenv
+    finally:
+      - echo This will always run if install command failed
   pre_build:
     commands:
       - echo Entered the pre_build phase...
